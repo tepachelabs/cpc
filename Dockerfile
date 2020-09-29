@@ -7,4 +7,4 @@ ENV NODE_ENV=production
 RUN npm install
 COPY . .
 EXPOSE ${PORT}
-CMD [ "node", "index.js" ]
+CMD [ "node", "./bin/www" ]
