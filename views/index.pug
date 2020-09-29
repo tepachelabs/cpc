@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    .cover-container.d-flex.w-100.h-100.p-3.mx-auto.flex-column.text-center
+        header.masthead.mb-auto
+            .inner
+                h3.masthead-brand= title
+                nav.nav.nav-masthead.justify-content-center
+                    a.nav-link.active(href="/") Inicio
+                    a.nav-link(href="mailto:hola@tonymtz.com?subject=El%20Culto%20al%20Perro%20Café") Contacto
+
+        main.inner.cover(role="main")
+            h1.cover-heading.mb-4 ¡Bienvenido!
+            img.my-4(src="/images/logo.png" alt="logo" width="280")
+            p.lead.mt-4 Estamos preparando algo genial, sigue éste proyecto en nuestras redes sociales.
+            p.lead
+                a.btn.btn-lg.btn-secondary.mx-2.my-2(href="http://instagram.com/cultoperrocafe" target="_blank")
+                    i.mr-2(data-feather="instagram") Instagram
+                    | Instagram
+                a.btn.btn-lg.btn-secondary.mx-2.my-2(href="https://www.facebook.com/cultoperrocafe" target="_blank")
+                    i.mr-2(data-feather="facebook") Facebook
+                    | Facebook
+                a.btn.btn-lg.btn-secondary.mx-2.my-2(href="http://twitter.com/cultoperrocafe" target="_blank")
+                    i.mr-2(data-feather="twitter") Twitter
+                    | Twitter
+
+        footer.mastfoot.mt-auto
+            .inner
+                p Copyright &copy; 2020. Todos los derechos reservados.
+
