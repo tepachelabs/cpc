@@ -1,8 +1,28 @@
 doctype html
 html(lang="es")
     head
+        // Primary Meta
         title= title
+        meta(name="title" content=title)
+        meta(name="description" content=description)
+        // Facebook
+        meta(property="og:type" content="website")
+        meta(property="og:url" content=url)
+        meta(property="og:title" content=title)
+        meta(property="og:description" content=description)
+        meta(property="og:image" content=image)
+        // TWITTER
+        meta(name="twitter:card" content="summary")
+        meta(name="twitter:url" content=url)
+        meta(name="twitter:site" content="@cultoperrocafe")
+        meta(name="twitter:title" content=title)
+        meta(name="twitter:description" content=description)
+        meta(name="twitter:app:country" content="México")
+        meta(name="twitter:image" content=image)
+        // Other
         link(href="/images/favicon.png" rel="shortcut icon")
+        meta(name="robots" content="index, follow")
+        // Moar stuff
         link(rel="stylesheet" href="//fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap")
         link(rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous")
         link(rel='stylesheet', href='/stylesheets/style.css')
