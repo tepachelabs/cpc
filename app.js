@@ -7,7 +7,6 @@ var stylus = require('stylus');
 
 var captiveRouter = require('./routes/captive');
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var menuRouter = require('./routes/menu');
 
 var app = express();
@@ -25,7 +24,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/captive', captiveRouter);
-app.use('/users', usersRouter);
 app.use('/menu', menuRouter);
 
 // catch 404 and forward to error handler

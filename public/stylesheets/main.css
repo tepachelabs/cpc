@@ -47,6 +47,10 @@ a:hover {
 .bg-dark {
   background: #222 !important;
 }
+.btn-primary {
+  background: #b45a38 !important;
+  border: #b45a38 !important;
+}
 .section {
   padding-bottom: 6em;
   padding-top: 6em;
