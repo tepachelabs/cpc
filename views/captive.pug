@@ -1,25 +1,30 @@
 extends layout
 
+mixin displayPrice(price)
+    if price > 0
+        span $ #{price}
+    else
+        span -
+
 block content
-    .cover-container.d-flex.w-100.h-100.p-3.mx-auto.flex-column.text-center
-        main.inner.cover(role="main")
-            img.my-4(src="/images/logo.png" alt="logo" width="180")
-            p.lead.mt-4 Bienvenido a nuestro servicio de WI-FI público.
-            p Al utilizar éste servicio aceptas los términos y condiciones.
-            p No se permite utilizar éste servicio para fines fuera de la ley. Ésta red está en constante monitoreo. Si detectamos un comportamiento no adecuado, te pediremos que dejes de utilizar nuestro servicio. Cualquier problema comunicarse con los administradores.
-            p.lead.mt-4 ¡Síguenos en nuestras redes sociales!
-            p.lead
-                a.btn.btn-lg.btn-secondary.mx-2.my-2(href="http://instagram.com/cultoperrocafe" target="_blank")
-                    i.mr-2(data-feather="instagram") Instagram
-                    | Instagram
-                a.btn.btn-lg.btn-secondary.mx-2.my-2(href="https://www.facebook.com/cultoperrocafe" target="_blank")
-                    i.mr-2(data-feather="facebook") Facebook
-                    | Facebook
-                a.btn.btn-lg.btn-secondary.mx-2.my-2(href="http://twitter.com/cultoperrocafe" target="_blank")
-                    i.mr-2(data-feather="twitter") Twitter
-                    | Twitter
+    #hero.small.coffee.text-center.pt-5.shadow
+        img.my-5(src="/images/logo-candles.svg" alt="logo" width="360")
 
-        footer.mastfoot.mt-auto
-            .inner
-                p Copyright &copy; 2020. Todos los derechos reservados.
-
+    .container.section
+        .row
+            .col
+                h2.title ¡Bienvenido!
+        .row
+            .col
+                p.big Éste es nuestro servicio de WI-FI público.
+                p.big ¡Síguenos en nuestras redes sociales!
+                p.big
+                    a.btn.btn-lg.btn-secondary.mx-2.my-2(href="http://instagram.com/cultoperrocafe" target="_blank")
+                        i.mr-2(data-feather="instagram") Instagram
+                        | Instagram
+                    a.btn.btn-lg.btn-secondary.mx-2.my-2(href="https://www.facebook.com/cultoperrocafe" target="_blank")
+                        i.mr-2(data-feather="facebook") Facebook
+                        | Facebook
+                    a.btn.btn-lg.btn-secondary.mx-2.my-2(href="http://twitter.com/cultoperrocafe" target="_blank")
+                        i.mr-2(data-feather="twitter") Twitter
+                        | Twitter
