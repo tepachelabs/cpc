@@ -1,0 +1,77 @@
+html
+  height 100%
+  background-color #333
+  scroll-behavior smooth
+
+html, body
+  font 14px "Roboto Slab", serif
+
+a
+  text-decoration none
+
+  &:active,
+  &:hover
+    color #b45a38
+
+#hero
+  width 100%
+  height 90vh
+  position relative
+  background #666 center center
+  background-size cover
+
+  &.winnie
+    background-image url(/images/winnie.jpg)
+
+  &.coffee
+    background-image url(/images/coffee.jpg)
+
+  &.small
+    height 45vh
+
+  .big
+    font-size 1.5em
+
+  .icon-big
+    height 3em
+    width 3em
+
+.shadow-on-hover:hover
+    svg
+      box-shadow 0 0.25rem 1rem rgba(0,0,0,0.3)
+      border-radius 100%
+
+.white
+  color white
+
+.bg-dark
+  background #222222 !important
+
+.section
+  padding-bottom 6em
+  padding-top 6em
+
+  h2
+    font-size 3em
+    position relative
+
+    &.title
+      padding-bottom 0.5em
+      margin-bottom 1em
+
+      &:after
+        content ' '
+        background-color #666
+        height 2px
+        width 10%
+        position absolute
+        bottom 0
+        left 0
+
+.big
+  font-size 1.25em
+
+footer
+  color white
+  font-size 1.1em
+  box-shadow 0 -0.5rem 1rem rgba(0,0,0,.15)

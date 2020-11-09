@@ -1,30 +1,20 @@
 extends layout
 
 block content
-    .cover-container.d-flex.w-100.h-100.p-3.mx-auto.flex-column.text-center
-        header.masthead.mb-auto
-            .inner
-                h3.masthead-brand= title
-                nav.nav.nav-masthead.justify-content-center
-                    a.nav-link.active(href="/") Inicio
-                    a.nav-link(href="mailto:hola@tonymtz.com?subject=El%20Culto%20al%20Perro%20Café") Contacto
+    #hero.winnie.text-center.pt-5.shadow
+        img.my-5(src="/images/logo.svg" alt="logo" width="480")
+        p.mt-5.white.big Cafetería Indie Experimental
+        p.white.big Hermosillo, MX
+        a.shadow-on-hover(href="#map")
+            i.white.icon-big.mt-5(data-feather="arrow-down-circle")
 
-        main.inner.cover(role="main")
-            h1.cover-heading.mb-4 ¡Bienvenido!
-            img.my-4(src="/images/logo.png" alt="logo" width="280")
-            p.lead.mt-4 Estamos preparando algo genial, sigue éste proyecto en nuestras redes sociales.
-            p.lead
-                a.btn.btn-lg.btn-secondary.mx-2.my-2(href="http://instagram.com/cultoperrocafe" target="_blank")
-                    i.mr-2(data-feather="instagram") Instagram
-                    | Instagram
-                a.btn.btn-lg.btn-secondary.mx-2.my-2(href="https://www.facebook.com/cultoperrocafe" target="_blank")
-                    i.mr-2(data-feather="facebook") Facebook
-                    | Facebook
-                a.btn.btn-lg.btn-secondary.mx-2.my-2(href="http://twitter.com/cultoperrocafe" target="_blank")
-                    i.mr-2(data-feather="twitter") Twitter
-                    | Twitter
-
-        footer.mastfoot.mt-auto
-            .inner
-                p Copyright &copy; 2020. Todos los derechos reservados.
-
+    #map.container.section
+        .row.mb-3
+            .col
+                h2.title ¿Dónde estamos?
+                p.big.mb-1 Blvd. Navarrete 125, local 15. Colonia Valle Verde. 83200.
+                p.big Hermosillo, Sonora.
+        .row
+            .col
+                .embed-responsive.embed-responsive-21by9
+                    iframe(src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJxx7DyCyFzoYRhsNjQuHvuZI&key=AIzaSyB52hL2XamGhGXGSTr3Dz3TH2FJOmGKUlY" allowfullscreen)
