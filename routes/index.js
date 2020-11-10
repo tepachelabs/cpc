@@ -1,5 +1,7 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const getInstagramPosts = require("../data/instagram").getInstagramPosts;
+
+const router = express.Router();
 
 const meta = {
   title: 'El Culto al Perro Café',
@@ -10,7 +12,8 @@ const meta = {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', {...meta, path: req.originalUrl});
+  const feed = getInstagramPosts();
+  res.render('index', {...meta, feed, path: req.originalUrl});
 });
 
 module.exports = router;
