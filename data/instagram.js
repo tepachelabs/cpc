@@ -1,13 +1,21 @@
 const axios = require('axios').default;
 
+const USER_AGENT = process.env.USER_AGENT || 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0';
 const INSTAGRAM_URL = 'https://www.instagram.com/explore/tags/cultoperrocafe/?__a=1';
 let instagramPosts = {};
 
 async function fetchInstagramPosts() {
     try {
-        const response = await axios.get(INSTAGRAM_URL);
+        const response = await axios.get(INSTAGRAM_URL, {
+            headers: {
+                'User-Agent': USER_AGENT,
+                'Content-type': 'text/plain',
+                'Cache-Control': 'no-cache'
+            },
+        });
 
         let posts = [];
+        console.log(response.data);
         response.data.graphql.hashtag.edge_hashtag_to_media.edges.forEach(({node}) => {
             if (node['owner']['id'] !== '37716221215' || node['is_video']) return;
             posts.push({
