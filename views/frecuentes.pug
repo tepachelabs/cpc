@@ -1,0 +1,28 @@
+extends layout
+
+mixin displayPrice(price)
+    if price > 0
+        span $ #{price}
+    else
+        span -
+
+block content
+    #hero.small.coffee.text-center.pt-5.shadow
+        img.my-5(src="/images/logo-candles.svg" alt="logo" width="360")
+
+    .container.section
+        .row
+            .col
+                h2.title Programa de clientes perrones
+        .row
+            .col
+                p.big Te presentamos nuestro programa de recompensas, creado para premiarte por tu consumo.
+                p.big Pide tu tarjeta de cliente perrón en nuestra sucursal, ¡no tiene costo!
+        .row
+            .col
+                h3 Bases
+        .row
+            .col
+                p Por cada orden mayor a $50 pesos que consumas, te damos un sello en tu tarjeta de clientes perrones.
+                p Presenta tu tarjeta con 10 sellos, te regalamos un producto de hasta $50 pesos.
+                p Presenta dos tarjetas con 10 sellos cada una, elige entre una taza o un pin del culto.

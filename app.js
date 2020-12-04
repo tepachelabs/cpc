@@ -9,6 +9,7 @@ var captiveRouter = require('./routes/captive');
 var indexRouter = require('./routes/index');
 var menuRouter = require('./routes/menu');
 var feedRouter = require('./routes/feed');
+var frecuentesRouter = require('./routes/frecuentes');
 
 var app = express();
 
@@ -27,6 +28,7 @@ app.use('/', indexRouter);
 app.use('/captive', captiveRouter);
 app.use('/menu', menuRouter);
 app.use('/feed', feedRouter);
+app.use('/frecuentes', frecuentesRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
