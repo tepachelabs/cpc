@@ -54,8 +54,10 @@ const menu = {
             items: [
                 {name: "Té Perrón", price: {local: 20, small: 0, big: 24}},
                 {name: "Chai", price: {local: 50, small: 0, big: 54}},
-                {name: "Tisanas Caliente", price: {local: 50, small: 0, big: 54}},
-                {name: "Tisanas Frías", price: {local: 55, small: 0, big: 59}},
+                {name: "Tisana Caliente", price: {local: 50, small: 0, big: 54}},
+                {name: "Tisana Fría", price: {local: 55, small: 0, big: 59}},
+                {name: "Matcha Caliente", price: {local: 50, small: 0, big: 54}},
+                {name: "Matcha Fría", price: {local: 55, small: 0, big: 59}},
             ],
         }
     ],
