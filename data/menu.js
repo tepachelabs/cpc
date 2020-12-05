@@ -16,6 +16,9 @@ const menu = {
                 {name: "Espresso", price: {local: 30, small: 35, big: 0}},
                 {name: "Macchiato", price: {local: 30, small: 35, big: 0}},
                 {name: "Moccha", price: {local: 50, small: 0, big: 55}},
+                {name: "Flat White", price: {local: 40, small: 45, big: 0}},
+                {name: "Gran Danés", price: {local: 65, small: 0, big: 69}},
+                {name: "Sifón Japonés", price: {local: 60, small: 0, big: 0}},
             ],
         },
         {
@@ -50,6 +53,8 @@ const menu = {
             items: [
                 {name: "Té Perrón", price: {local: 20, small: 0, big: 24}},
                 {name: "Chai", price: {local: 50, small: 0, big: 54}},
+                {name: "Tisanas Caliente", price: {local: 50, small: 0, big: 54}},
+                {name: "Tisanas Frías", price: {local: 55, small: 0, big: 59}},
             ],
         }
     ],

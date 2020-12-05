@@ -15,7 +15,7 @@ async function fetchInstagramPosts() {
         });
 
         let posts = [];
-        console.log(response.data);
+        // console.log(response.data);
         response.data.graphql.hashtag.edge_hashtag_to_media.edges.forEach(({node}) => {
             if (node['owner']['id'] !== '37716221215' || node['is_video']) return;
             posts.push({
