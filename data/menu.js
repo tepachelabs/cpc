@@ -19,6 +19,7 @@ const menu = {
                 {name: "Flat White", price: {local: 40, small: 45, big: 0}},
                 {name: "Gran Danés", price: {local: 65, small: 0, big: 69}},
                 {name: "Sifón Japonés", price: {local: 60, small: 0, big: 0}},
+                {name: "Chocolate Caliente", price: {local: 50, small: 0, big: 55}},
             ],
         },
         {
