@@ -20,6 +20,8 @@ const menu = {
                 {name: "Gran Danés", price: {local: 65, small: 0, big: 69}},
                 {name: "Sifón Japonés", price: {local: 60, small: 0, big: 0}},
                 {name: "Chocolate Caliente", price: {local: 50, small: 0, big: 55}},
+                {name: "Caramel Latte", price: {local: 55, small: 0, big: 59}},
+                {name: "Moccha-Menta Latte", price: {local: 55, small: 0, big: 59}},
             ],
         },
         {
@@ -57,7 +59,7 @@ const menu = {
                 {name: "Tisana Caliente", price: {local: 50, small: 0, big: 54}},
                 {name: "Tisana Fría", price: {local: 55, small: 0, big: 59}},
                 {name: "Matcha Caliente", price: {local: 50, small: 0, big: 54}},
-                {name: "Matcha Fría", price: {local: 55, small: 0, big: 59}},
+                {name: "Matcha Frío", price: {local: 55, small: 0, big: 59}},
             ],
         }
     ],

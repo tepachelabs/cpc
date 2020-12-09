@@ -1,0 +1,43 @@
+extends layout
+
+mixin rowLeft(image, title, content)
+    .row.my-5.py-5
+        .col.max-180
+            img(src=image alt="logo" width="140")
+        .col.align-middle
+            h3.mt-2.mb-5= title
+            p.big= content
+
+mixin rowRight(image, title, content)
+    .row.my-5.py-5
+        .col.align-middle
+            h3.mt-2.mb-5= title
+            p.big= content
+        .col.max-180
+            img(src=image alt="logo" width="140")
+
+block content
+    #hero.small.codi.text-center.pt-5.shadow
+        img.my-5(src="/images/logo-candles.svg" alt="logo" width="360")
+
+    .container.section
+        .row
+            .col
+                h2.title Medidas temporales por COVID-19
+        .row
+            .col
+                p.big Por tu seguridad y la de nuestro staff, éstas son las medidas obligatorias que implementamos.
+        .row.justify-content-md-center.mt-5
+            .col-12.col-md-10.col-lg-8
+                hr
+                +rowLeft("/images/mask.png", "", "Usar cubrebocas al ordenar en barra y al terminar de consumir tus alimentos.")
+                hr
+                +rowRight("/images/wash.png", "", "Uso de gel antibacterial o lavado de manos en nuestras instalaciones.")
+                hr
+                +rowLeft("/images/outdoors.png", "", "Puedes ordenar en barra pero te serviremos en exteriores")
+                hr
+                +rowRight("/images/distance.png", "", "Conservar una sana distancia con las demás personas de al menos 1.5 metros.")
+                hr
+                .row.mt-5
+                    .col
+                        p De no seguir las medidas te pediremos abandones nuestro local. Éstas medidas son para protegernos todos.
