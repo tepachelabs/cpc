@@ -11,6 +11,7 @@ var menuRouter = require('./routes/menu');
 var feedRouter = require('./routes/feed');
 var frecuentesRouter = require('./routes/frecuentes');
 var covidRouter = require('./routes/covid');
+var ggj21Router = require('./routes/ggj21');
 
 var app = express();
 
@@ -31,6 +32,7 @@ app.use('/menu', menuRouter);
 app.use('/feed', feedRouter);
 app.use('/frecuentes', frecuentesRouter);
 app.use('/covid-19', covidRouter);
+app.use('/ggj21', ggj21Router);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

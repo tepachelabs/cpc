@@ -6,12 +6,21 @@ html
 html, body
   font 14px "Roboto Slab", serif
 
+.open-sans
+  font 14px "Open Sans", serif
+
 a
   text-decoration none
 
   &:active,
   &:hover
     color #b45a38
+
+p
+  margin-bottom 1.5em
+
+.bold
+  font-weight bold
 
 #hero
   width 100%
@@ -29,6 +38,12 @@ a
   &.codi
     background-image url(/images/codi.jpg)
 
+  &.covid
+    background-image url(/images/covid.jpg)
+
+  &.working
+    background-image url(/images/working.jpg)
+
   &.small
     height 45vh
 
@@ -44,9 +59,9 @@ a
     width 100%
 
 .shadow-on-hover:hover
-    svg
-      box-shadow 0 0.25rem 1rem rgba(0,0,0,0.3)
-      border-radius 100%
+  svg
+    box-shadow 0 0.25rem 1rem rgba(0, 0, 0, 0.3)
+    border-radius 100%
 
 .white
   color white
@@ -85,10 +100,62 @@ a
 footer
   color white
   font-size 1.1em
-  box-shadow 0 -0.5rem 1rem rgba(0,0,0,.15)
+  box-shadow 0 -0.5rem 1rem rgba(0, 0, 0, .15)
+
+.mha
+  margin-left auto
+  margin-right auto
+
+.max-800
+  max-width 800px
 
 .max-600
   max-width 600px
 
 .max-180
   max-width 180px
+
+.hide
+  display none
+
+.callout
+  border 1px dotted transparent
+  padding 1em
+  margin-bottom 1em
+  border-radius 4px
+
+  &.orange
+    background rgba(180, 90, 56, 0.2)
+    border-color #b45a38
+
+  p
+    margin-bottom 0
+
+.corner-ribbon
+  z-index 1
+  width 400px
+  background #ffbc47
+  position absolute
+  text-align center
+  line-height 30px
+  letter-spacing 1px
+  top 105px
+  right -112px
+  left auto
+  transform rotate(45deg)
+  -webkit-transform rotate(45deg)
+
+  &.sticky
+    position fixed
+
+  &.shadow
+    box-shadow 0 0 3px rgba(0, 0, 0, .3)
+
+  p
+    margin-bottom 0
+
+  a
+    color inherit
+
+    &:hover
+      text-decoration none

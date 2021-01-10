@@ -1,6 +1,7 @@
 extends layout
 
 include partials/subscribe
+include partials/ggj21-ribbon
 
 block content
     #hero.winnie.text-center.pt-5
@@ -10,6 +11,7 @@ block content
         a.shadow-on-hover(href="#subscribe")
             i.white.icon-big.mt-5(data-feather="arrow-down-circle")
 
+    +ggj21-ribbon
     +subscribe
 
     #map.container.section
