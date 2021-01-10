@@ -21,7 +21,6 @@ class MetaBuilder {
     for (const prop in this) {
       if (this.hasOwnProperty(prop)) {
         clone[prop] = this[prop];
-        console.log(`obj.${ prop } = ${ this[prop] }`);
       }
     }
     return clone;
