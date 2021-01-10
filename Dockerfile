@@ -1,4 +1,4 @@
-FROM node:10-alpine as cpc
+FROM node:14.15.4-alpine as cpc
 LABEL maintainer="tonymtz <hello@tonymtz.com>"
 WORKDIR /usr/src/app
 COPY package*.json ./
