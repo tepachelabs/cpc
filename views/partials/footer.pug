@@ -1,16 +1,33 @@
 mixin footer
-    footer.bg-dark.mt-auto.py-5
+    footer.bg-custom.mt-auto.py-5
         .container
             .row
-                .col
-                    p Copyright &copy; 2020. Todos los derechos reservados.
-                .col.text-right
-                    p
-                        small Síguenos en nuestras redes:
+                .col-12.col-md
+                    h5 Dirección
+                    p.mb-0 Blvd. Navarrete 125, local 15.
+                    p.mb-0 Valle Verde, 83200.
+                    p Hermosillo, Sonora.
+                .col-12.col-md
+                    h5 Horarios de atención
+                    ul
+                        li Lun 8:00 - 20:00 hrs
+                        li Mar 8:00 - 20:00 hrs
+                        li Mie 8:00 - 20:00 hrs
+                        li Jue 8:00 - 20:00 hrs
+                        li Vie 8:00 - 20:00 hrs
+                        li Sab 8:00 - 20:00 hrs
+                        li Dom 14:00 - 20:00 hrs
+                .col-12.col-md.social
+                    h5 Síguenos en nuestras redes:
                     p
                         a.mx-2.white(href="http://instagram.com/cultoperrocafe" target="_blank")
-                            i(data-feather="instagram") Instagram
+                            img(src="/images/icons/instagram.svg" alt="Cuenta de instagram" loading="lazy")
                         a.mx-2.white(href="https://www.facebook.com/cultoperrocafe" target="_blank")
-                            i(data-feather="facebook") Facebook
+                            img(src="/images/icons/facebook.svg" alt="Cuenta de facebook" loading="lazy")
                         a.mx-2.white(href="http://twitter.com/cultoperrocafe" target="_blank")
-                            i(data-feather="twitter") Twitter
+                            img(src="/images/icons/twitter.svg" alt="Cuenta de twitter" loading="lazy")
+            .row
+                .col-12.col-md-6
+                    p.mt-4 Copyright &copy; 2020 TepacheLabs. Todos los derechos reservados.
+                .col.logo
+                    img(src="/images/icons/logo-w.svg" width=80 loading="lazy")

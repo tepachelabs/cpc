@@ -2,12 +2,13 @@ class MetaBuilder {
   static TITLE = 'title';
   static DESC = 'description';
   static URL = 'url';
+  static IMAGE = 'image';
 
   constructor() {
     this.site = 'Culto al Perro Café';
     this.description = 'Cafetería Indie Experimental. Una cafetería que entiende a la gente que trabaja. Hermosillo, Sonora.';
     this.url = '';
-    this.image = 'https://cultoperrocafe.com/images/social.jpg';
+    this.image = 'home.png';
   }
 
   setProp(prop, value) {

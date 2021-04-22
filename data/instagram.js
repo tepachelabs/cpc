@@ -1,6 +1,6 @@
 const axios = require('axios').default;
 
-const USER_AGENT = process.env.USER_AGENT || 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0';
+const USER_AGENT = process.env.USER_AGENT || 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36';
 const INSTAGRAM_URL = 'https://www.instagram.com/explore/tags/cultoperrocafe/?__a=1';
 let instagramPosts = {};
 

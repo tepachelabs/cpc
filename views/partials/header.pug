@@ -9,16 +9,17 @@ mixin nav-item(uri, label)
 
 mixin header
     header
-        .navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top.shadow
+        .navbar.navbar-expand-lg.navbar-dark.bg-custom.fixed-top.shadow
             .container
-                a.navbar-brand(href="/") El Culto al Perro Café
+                a.navbar-brand(href="/") Culto al Perro Café
                 button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
                     span.navbar-toggler-icon
                 #navbarNav.collapse.navbar-collapse
                     ul.navbar-nav.ml-auto
                         +nav-item('/', 'Inicio')
-                        +nav-item('/menu', 'Nuestro Menú')
-                        +nav-item('/frecuentes', 'Clientes Frecuentes')
-                        +nav-item('/covid-19', 'COVID-19')
+                        //+nav-item('/ordena', 'Ordena')
+                        //+nav-item('/nosotros', 'Nosotros')
+                        +nav-item('/menu', 'Menú')
+                        +nav-item('/frecuentes', 'Frecuentes')
                         +nav-item('mailto:hola@tonymtz.com?subject=El%20Culto%20al%20Perro%20Café', 'Contacto')
 

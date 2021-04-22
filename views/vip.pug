@@ -1,0 +1,37 @@
+extends layouts/layout
+
+include partials/virtual-hr
+
+block content
+    .container.section
+        .row
+            .col-12.col-md-7
+                h2.title Programa de Clientes Frecuentes
+                p Conoce nuestro programa de recompensas, creado para premiarte por tu consumo.
+            .col.text-right
+                img(src="/images/icons/cards.svg" loading="lazy")
+        .row.mt-10
+            .col-12.col-md-6
+                .big-number 1
+                h3 Pide tu tarjeta
+                p Recibe tu tarjeta de cliente perrón en nuestra sucursal, ¡no tiene costo!
+            .col-12.col-md-6
+                .big-number 2
+                h3 Premia tu consumo
+                p Gana un sello para tu tarjeta por cada orden mayor a MXN$50. Sólo muestra tu tarjeta al momento de pagar. Recuerda siempre traer contigo tu tarjeta pues los sellos no son transferibles.
+            .col-12.col-md-6
+                .big-number 3
+                h3 Tu recompensa
+                p Presenta tu tarjeta con 10 sellos y te premiamos con una bebida con valor de hasta MXN$50, ¡Gratis!. Te devolveremos tu tarjeta marcada. Aún no la deseches, pues viene lo mejor.
+            .col-12.col-md-6
+                .big-number 4
+                h3 Premio Mayor
+                p Al presentar dos tarjetas llenas, ¡elige qué premio llevarte!. Decide entre una taza perrona o un pin del culto.
+
+    +virtual-hr
+
+    .container.mb-5
+        .row
+            .col
+                p
+                    small * Aplican restricciones. No válido con otras promociones. Los sellos son intransferibles. Las recompensas no pueden ser cobradas en efectivo. Recompensas sujetas a existencias. El programa de recompensas puede ser negado a discreción si se considera que se está haciendo mal uso de la misma.
