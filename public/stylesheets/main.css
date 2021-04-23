@@ -1,162 +1,133 @@
 html {
   height: 100%;
-  background-color: #333;
   scroll-behavior: smooth;
 }
-html,
 body {
-  font: 14px "Roboto Slab", serif;
+  color: #232222;
+  background-color: #fafafa;
 }
-.open-sans {
-  font: 14px "Open Sans", serif;
-}
-a {
-  text-decoration: none;
-}
-a:active,
-a:hover {
-  color: #b45a38;
-}
-p {
-  margin-bottom: 1.5em;
-}
-.bold {
-  font-weight: bold;
-}
-#hero {
-  width: 100%;
-  height: 90vh;
-  position: relative;
-  background: #666 center center;
-  background-size: cover;
-}
-#hero.winnie {
-  background-image: url("/images/winnie.jpg");
-}
-#hero.coffee {
-  background-image: url("/images/coffee.jpg");
-}
-#hero.codi {
-  background-image: url("/images/codi.jpg");
-}
-#hero.covid {
-  background-image: url("/images/covid.jpg");
-}
-#hero.working {
-  background-image: url("/images/working.jpg");
-}
-#hero.small {
-  height: 45vh;
-}
-#hero .big {
-  font-size: 1.5em;
-}
-#hero .icon-big {
-  height: 3em;
-  width: 3em;
-}
-#hero .main-logo {
-  max-width: 480px;
+.container-size {
+  height: 100%;
   width: 100%;
 }
-.shadow-on-hover:hover svg {
-  box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.3);
-  border-radius: 100%;
+.bg-custom {
+  background-color: #232222;
 }
-.white {
-  color: #fff;
-}
-.bg-dark {
-  background: #222 !important;
+.mt-10 {
+  margin-top: 6rem !important;
 }
 .btn-primary {
   background: #b45a38 !important;
   border: #b45a38 !important;
 }
 .section {
-  padding-bottom: 6em;
-  padding-top: 6em;
+  padding-bottom: 5em;
+  padding-top: 5em;
 }
 .section h2 {
-  font-size: 3em;
-  position: relative;
+  padding-bottom: 1em;
 }
-.section h2.title {
-  padding-bottom: 0.5em;
+.section h2:after {
+  border-bottom: 3px solid #b55a37;
+  content: ' ';
+  display: block;
+  margin-top: 0.25em;
+  width: 2em;
+}
+.section .big-number {
+  background-color: #232222;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  width: 2em;
+}
+.section .big-number + h3 {
+  display: inline-block;
+  line-height: 2em;
+  margin-bottom: 0;
+  margin-left: 0.75em;
+  vertical-align: middle;
+}
+.virtual-hr {
+  position: relative;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+.virtual-hr:before,
+.virtual-hr:after {
+  content: ' ';
+  border-bottom: 1px solid #232222;
+  display: block;
+  position: absolute;
+  width: 40%;
+  top: 50%;
+}
+.virtual-hr:before {
+  left: 15px;
+}
+.virtual-hr:after {
+  right: 15px;
+}
+@media (max-width: 767px) {
+  .virtual-hr:before,
+  .virtual-hr:after {
+    width: 30%;
+  }
+}
+.reviews .card {
+  background-color: #fff;
+}
+.products .card {
+  background-color: transparent;
+  border: 0;
+}
+.products .card-body {
+  padding-left: 0;
+}
+.products .card-img-top {
+  border-radius: 0;
+}
+.feed .card {
+  border: 0;
   margin-bottom: 1em;
 }
-.section h2.title:after {
-  content: ' ';
-  background-color: #666;
-  height: 2px;
-  width: 10%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.feed .card-body {
+  padding-left: 0;
 }
-.big {
-  font-size: 1.25em;
+.feed .card-img-top {
+  border-radius: 0;
+}
+.image-left-panel .content {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
 }
 footer {
   color: #fff;
-  font-size: 1.1em;
+  font-size: 0.8em;
   box-shadow: 0 -0.5rem 1rem rgba(0,0,0,0.15);
 }
-.mha {
-  margin-left: auto;
-  margin-right: auto;
+footer h5 {
+  font-size: 1.25em;
 }
-.max-800 {
-  max-width: 800px;
+footer ul {
+  padding-left: 0;
 }
-.max-600 {
-  max-width: 600px;
+footer ul li {
+  list-style: none;
 }
-.max-180 {
-  max-width: 180px;
+footer .social,
+footer .logo {
+  text-align: right;
 }
-.hide {
-  display: none;
-}
-.callout {
-  border: 1px dotted transparent;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-radius: 4px;
-}
-.callout.orange {
-  background: rgba(180,90,56,0.2);
-  border-color: #b45a38;
-}
-.callout p {
-  margin-bottom: 0;
-}
-.corner-ribbon {
-  z-index: 1;
-  width: 400px;
-  background: #ffbc47;
-  position: absolute;
-  text-align: center;
-  line-height: 30px;
-  letter-spacing: 1px;
-  top: 105px;
-  right: -112px;
-  left: auto;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-.corner-ribbon.sticky {
-  position: fixed;
-}
-.corner-ribbon.shadow {
-  box-shadow: 0 0 3px rgba(0,0,0,0.3);
-}
-.corner-ribbon p {
-  margin-bottom: 0;
-}
-.corner-ribbon a {
-  color: inherit;
-}
-.corner-ribbon a:hover {
-  text-decoration: none;
+@media (max-width: 767px) {
+  footer .logo {
+    text-align: center;
+  }
+  footer .social {
+    text-align: left;
+  }
 }

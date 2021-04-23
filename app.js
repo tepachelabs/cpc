@@ -8,10 +8,8 @@ var stylus = require('stylus');
 var captiveRouter = require('./routes/captive');
 var indexRouter = require('./routes/index');
 var menuRouter = require('./routes/menu');
-var feedRouter = require('./routes/feed');
-var frecuentesRouter = require('./routes/frecuentes');
-var covidRouter = require('./routes/covid');
-var ggj21Router = require('./routes/ggj21');
+var vipRouter = require('./routes/vip');
+var testRouter = require('./routes/test');
 
 var app = express();
 
@@ -21,7 +19,7 @@ app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(stylus.middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -29,10 +27,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/captive', captiveRouter);
 app.use('/menu', menuRouter);
-app.use('/feed', feedRouter);
-app.use('/frecuentes', frecuentesRouter);
-app.use('/covid-19', covidRouter);
-app.use('/ggj21', ggj21Router);
+app.use('/frecuentes', vipRouter);
+app.use('/test', testRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

@@ -1,0 +1,13 @@
+mixin reviews
+    .reviews.section
+        .container
+            .row
+                .col
+                    h2 Opiniones
+            .row.row-cols-1.row-cols-lg-3
+                each review in reviews
+                    .col
+                        .card.mb-4
+                            .card-body.text-right
+                                p= review.comment
+                                p - #{review.author}

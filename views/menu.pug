@@ -1,58 +1,14 @@
-extends layout
-
-include partials/subscribe
-
-mixin displayPrice(price)
-    if price > 0
-        span $ #{price}
-    else
-        span -
+extends layouts/layout
 
 block content
-    #hero.small.coffee.text-center.pt-5.shadow
-        img.my-5(src="/images/logo-candles.svg" alt="logo" width="360")
-
-    #menu.container.section
+    .container.section
         .row
-            .col
+            .col-12.col-md-7
                 h2.title Nuestro Menú
-                p.big.mb-1 Nuestros productos no se limitan a los aquí listados. Siempre estamos innovando en el laboratorio: nuestra cocina.
-                p.big Pregunta por nuestro menú experimental y las bebidas de temporada.
-
-        each section in sections
-            .row.justify-content-center.my-5.py-5
-                .col-12.col-md-6.d-flex.mb-5.pb-5
-                    .media.align-items-center.justify-content-between.w-100
-                        .media-body
-                            h3= section.title
-                        - src = `/images/${section.image}`
-                        img.mr-5(src=src alt=section.title width=section.width)
-                .w-100
-                .col-12.col-md-8
-                    table.table.text-center
-                        thead
-                            tr
-                                th
-                                th Local
-                                if section.isExtended
-                                    th Chico*
-                                    th Regular*
-                                else
-                                    th Para llevar
-                        each item in section.items
-                            tr
-                                td.text-left= item.name
-                                td
-                                    +displayPrice(item.price.local)
-                                if section.isExtended
-                                    td
-                                        +displayPrice(item.price.small)
-                                td
-                                    +displayPrice(item.price.big)
-                        if section.isExtended
-                            tfoot
-                                tr
-                                    td.text-left(colspan=4)
-                                        small * para llevar
-
-    +subscribe.shadow
+                p Nuestros productos no se limitan a los aquí listados. Siempre estamos innovando en el laboratorio: nuestra cocina.
+                p Pregunta por nuestro menú experimental y las bebidas de temporada.
+            .col.text-right
+                img(src="/images/icons/cup.svg" loading="lazy")
+        .row.mt-10
+            .col-12
+                img(src="/images/menu.svg" loading="lazy")

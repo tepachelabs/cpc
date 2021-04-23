@@ -1,11 +1,11 @@
-mixin feed
-    #map.container.section
-        .row.mb-3
-            .col
-                h2.title Imágenes
-                p.big El culto al perro café en instagram.
-        .row
-            each item in feed
-                .col-4.col-md-2.mb-5
-                    a(href=item.url target="_blank")
-                        img.w-100(src=item.thumb alt=item.alt)
+mixin feed(title)
+    .feed.section
+        .container
+            .row
+                .col
+                    h2 #{title || "Conócenos"}
+            .row.row-cols-2.row-cols-lg-4
+                each image in feed
+                    .col
+                        .card
+                            img.card-img-top(src=image loading="lazy")
