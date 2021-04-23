@@ -1,9 +1,9 @@
-mixin feed
+mixin feed(title)
     .feed.section
         .container
             .row
                 .col
-                    h2 Conócenos
+                    h2 #{title || "Conócenos"}
             .row.row-cols-2.row-cols-lg-4
                 each image in feed
                     .col

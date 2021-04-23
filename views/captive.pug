@@ -1,24 +1,28 @@
 extends layouts/layout
 
-block content
-    #hero.small.coffee.text-center.pt-5.shadow
-        img.my-5(src="/images/logo-candles.svg" alt="logo" width="360")
+include partials/products
+include partials/feed
 
+block content
     .container.section
         .row
-            .col
-                h2.title ¡Bienvenido!
+            .col-12.col-md-7
+                h2.title !Bienvenidx!
+                p Éste es nuestro servicio de WI-FI público.
+                p ¡Síguenos en nuestras redes sociales!
+            .col.text-right
+                img(src="/images/icons/drip.svg" loading="lazy")
         .row
-            .col
-                p.big Éste es nuestro servicio de WI-FI público.
-                p.big ¡Síguenos en nuestras redes sociales!
-                p.big
-                    a.btn.btn-lg.btn-secondary.mx-2.my-2(href="http://instagram.com/cultoperrocafe" target="_blank")
-                        i.mr-2(data-feather="instagram") Instagram
-                        | Instagram
-                    a.btn.btn-lg.btn-secondary.mx-2.my-2(href="https://www.facebook.com/cultoperrocafe" target="_blank")
-                        i.mr-2(data-feather="facebook") Facebook
-                        | Facebook
-                    a.btn.btn-lg.btn-secondary.mx-2.my-2(href="http://twitter.com/cultoperrocafe" target="_blank")
-                        i.mr-2(data-feather="twitter") Twitter
-                        | Twitter
+            .col-12
+                p
+                    a.btn.btn-primary.mx-2.my-2(href="http://instagram.com/cultoperrocafe" target="_blank")
+                        img(src="/images/icons/instagram.svg" alt="Cuenta de instagram" loading="lazy")
+                        span  Instagram
+                    a.btn.btn-primary.mx-2.my-2(href="https://www.facebook.com/cultoperrocafe" target="_blank")
+                        img(src="/images/icons/facebook.svg" alt="Cuenta de facebook" loading="lazy")
+                        span  Facebook
+                    a.btn.btn-primary.mx-2.my-2(href="http://twitter.com/cultoperrocafe" target="_blank")
+                        img(src="/images/icons/twitter.svg" alt="Cuenta de twitter" loading="lazy")
+                        span  Twitter
+    +products
+    +feed("Swag Perrón")
