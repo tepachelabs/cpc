@@ -5,13 +5,13 @@ mixin products
                 .col
                     h2 Nuestros productos
             .row.row-cols-2.row-cols-lg-4
-                each product in starred
-                    .col
-                        .card
-                            img.card-img-top(src=product.image loading="lazy")
-                            .card-body
-                                .card-title
-                                    span= product.title
+              each product in starred
+                  .col
+                      .card
+                          img.card-img-top(src=product.src srcset=product.srcset alt=product.alt loading="lazy")
+                          .card-body
+                              .card-title
+                                  span= product.title
             .row
                 .col.text-center
                     a.btn.btn-primary.btn-lg(href="/menu") Ver menú

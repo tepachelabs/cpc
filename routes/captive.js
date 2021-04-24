@@ -7,7 +7,11 @@ const feed = [
   'hat',
   'pin',
   'cup'
-].map(item => `/images/pictures/swag-${ item }.jpg`);
+].map(item => ({
+  src: `/images/pictures/swag-${ item }.jpg`,
+  srcset: `/images/pictures/swag-${ item }-145.jpg 480w, /images/pictures/swag-${ item }-210.jpg 960w`,
+  alt: 'Productos promocionales',
+}));
 
 var router = express.Router();
 
