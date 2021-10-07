@@ -131,3 +131,35 @@ footer .logo {
     text-align: left;
   }
 }
+.menu {
+  margin: 0 auto;
+  max-width: 800px;
+}
+.menu ul {
+  padding: 0;
+}
+.menu ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.75;
+}
+.menu p {
+  color: #888;
+  font-size: 0.85em;
+  font-style: italic;
+}
+.menu [class^="col"] {
+  position: relative;
+  padding-bottom: 4em;
+}
+.menu [class^="col"] img {
+  position: absolute;
+  width: 100px;
+  top: 6em;
+  left: 40%;
+  opacity: 0.1;
+}
+.menu .card {
+  background-color: #fff;
+}
