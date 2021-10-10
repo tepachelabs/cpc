@@ -37,17 +37,17 @@ block content
                         li
                             span #{product.title}
                             span #{formatPrice(product.price)}
-                p Nuestros waffles con hechos sin ingredientes de origen animal. ¡Puedes pedirlos sin topping!
+                p Nuestros waffles son hechos sin ingredientes de origen animal. ¡Puedes cambiar los toppings!
                 img(src="/images/icons/friends.svg" loading="lazy")
             .col-12.col-md-6
                 h4 Repostería
-                p Panqués hechos con amor en nuestra cocina perfectos para acompañar tu bebida.
+                p Panqués hechos con amor en nuestra cocina, perfectos para acompañar tu bebida.
                 ul
                     each product in products[4]
                         li
                             span #{product.title}
                             span #{formatPrice(product.price)}
-                p Nuestros panqués con hechos sin ingredientes de origen animal.
+                p Nuestros panqués son hechos sin ingredientes de origen animal.
             .col-12.col-md-6
                 h4 Métodos
                 p Para conocedores y paladares exigentes, contamos con diferentes métodos de extracción.
@@ -56,4 +56,6 @@ block content
                         li
                             span #{product.title}
                             span #{formatPrice(product.price)}
+            .col-12.col-md-6
+                p Todos los precios en MXN. Aceptamos efectivo, tarjetas de débito, crédito y transferencia bancaria. Menú sujeto a disponibilidad. Los productos temporales no se incluyen ¡pregúntanos para saber más!.
 
