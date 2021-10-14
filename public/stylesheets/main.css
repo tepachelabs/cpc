@@ -77,6 +77,16 @@ body {
     width: 30%;
   }
 }
+ul.list {
+  padding-left: 1.2em;
+}
+ul.list li {
+  color: inherit;
+  list-style: square;
+}
+ul.list li a {
+  color: inherit;
+}
 .reviews .card {
   background-color: #fff;
 }
