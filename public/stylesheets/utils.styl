@@ -7,3 +7,43 @@
 
 .mt-10
   margin-top 6rem !important
+
+.hide
+  display none !important
+
+.corner-ribbon
+  z-index 999
+  width 400px
+  background orange
+  color white
+  position absolute
+  text-align center
+  line-height 30px
+  letter-spacing 1px
+  top 100px
+  right -130px
+  left auto
+  transform rotate(45deg) scale(0.7)
+  -webkit-transform rotate(45deg) scale(0.7)
+
+  @media (min-width: breakpoint)
+    &
+      top 130px
+      right -100px
+      transform rotate(45deg)
+      -webkit-transform rotate(45deg)
+
+  .sticky
+    position fixed
+
+  .shadow
+    box-shadow 0 0 3px rgba(0, 0, 0, 0.3)
+
+  p
+    margin-bottom 0
+
+  a
+    color inherit
+
+  a:hover
+    text-decoration none

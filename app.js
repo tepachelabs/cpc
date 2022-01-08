@@ -9,6 +9,7 @@ var captiveRouter = require('./routes/captive');
 var indexRouter = require('./routes/index');
 var menuRouter = require('./routes/menu');
 var vipRouter = require('./routes/vip');
+var ggj22Router = require('./routes/ggj22');
 var testRouter = require('./routes/test');
 var redirectionRouter = require('./routes/redirection');
 
@@ -31,6 +32,7 @@ app.use('/menu', menuRouter);
 app.use('/frecuentes', vipRouter);
 app.use('/test', testRouter);
 app.use('/r', redirectionRouter);
+app.use('/ggj22', ggj22Router);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

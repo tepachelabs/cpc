@@ -1,0 +1,137 @@
+extends layouts/layout
+
+include partials/virtual-hr
+
+block content
+    .container.section
+        .row
+            .col-12.col-md-7
+                h4 Global Game Jam™ 2022
+                h2.title Sede Hermosillo
+                p #GGJ22 es un evento colaborativo de un fin de semana.
+                p Los participantes aportan sus habilidades y conocimientos para integrar equipos, a los que motivamos a experimentar, explorar su creatividad, utilizar distintas herramientas y probar nuevos roles en el desarrollo de proyectos de juegos de mesa o videojuegos.
+            .col.text-right
+                img(src="/images/icons/ghost.svg" loading="lazy")
+        .row.mt-5
+            .col
+                h4 En Resumen:
+                p
+                    ul
+                        li
+                            b ¿Cuándo es?:&nbsp;
+                            | 28 al 30 de Enero, 2022 en Culto al Perro Café.
+                        li
+                            b ¿Quién puede participar?:&nbsp;
+                            | Cualquier persona mayor de edad.
+                        li
+                            b ¿Cómo me registro?:&nbsp;
+                            a(href="https://globalgamejam.org/2022/jam-sites/hermosillo") https://globalgamejam.org/2022/jam-sites/hermosillo
+        .row.mt-10
+            .col-12.col-md-4
+                h4 🗓 Fechas
+                p Iniciamos el viernes 28 de Enero en punto de las 5PM. Cerramos el evento el domingo 30 de Enero en punto de las 5PM con una ronda de demostración de los proyectos.
+            .col-12.col-md-4
+                h4 👩‍💻 Evento híbrido
+                p No es necesario asistir físicamente para participar. Sin embargo, todas las dinámicas serán de manera presencial. En el lugar, contaremos con extensiones eléctricas, buen internet y promociones exclusivas en el café.
+            .col-12.col-md-4
+                h4 🕹 Dinámica de trabajo
+                p Puedes asistir con tu equipo ya conformado. Si no tienes equipo, el día de inicio habrá una dinámica para integrar equipos.
+        .row.mt-10
+            .col-12.pb-5
+                h3 Promociones para participantes
+            .col-12.col-md-4
+                h4 ☕️ Culto al Perro Café
+                p Recibe 15% de descuento en bebidas y alimentos de la casa al mencionar el evento.
+            .col-12.col-md-4
+                h4 🍕 Casa Di Soto: Pizzas a la leña
+                p 15% de descuento al ordenar en el lugar mencionando el evento.
+        .row.my-5
+            .col
+                img.img-fluid(src="/images/pictures/ggj22/ggj-work.jpg" alt="Un equipo de realidad virtual")
+        .row.mt-10
+            .col
+                h3 Programa:
+            .col.text-right
+                input#toggle(type="checkbox" aria-label="Mostrar eventos del local")
+                label(for="toggle") &nbsp;Mostrar eventos del local
+            .col-12
+                table.table
+                    thead
+                        th(colspan="2") Viernes 28
+                    tbody
+                        tr
+                            td 17:00
+                            td Inauguración, presentación del evento.
+                        tr
+                            td 17:10
+                            td Presentación del tema secreto
+                        tr
+                            td 17:30
+                            td Dinámica para creación de equipos (opcional)
+                        tr
+                            td 18:00
+                            td Plática por Angel Maya (
+                                a(href="https://twitter.com/ANGELMAYAFLORES") @angelmayaflores
+                                | ): Pixel art, diseño de personaje y loop básico en photoshop “for dummies”
+                        tr
+                            td 19:00
+                            td Plática por Uriel Carrillo (
+                                a(href="https://twitter.com/El_tutsi") @el_tutsi
+                                | )
+                        tr
+                            td 20:00
+                            td Plática por José Salcido (
+                                a(href="https://twitter.com/jmsalcido") @jmsalcido
+                                | )
+                        tr.on-site.hide
+                            td 22:00
+                            td Cierre del local
+                    thead.on-site.hide
+                        th(colspan="2") Sábado 29
+                    tbody.on-site.hide
+                        tr
+                            td 08:00
+                            td Apertura del local
+                        tr
+                            td 22:00
+                            td Cierre del local
+                    thead
+                        th(colspan="2") Domingo 30
+                    tbody
+                        tr
+                            td 12:00
+                            td Apertura del local
+                        tr
+                            td 16:00
+                            td Se concluyen los proyectos y se suben a la página oficial de la Global Game Jam
+                        tr
+                            td 16:15
+                            td Presentación de proyectos y clausura del evento
+                        tr
+                            td 22:00
+                            td Cierre del local
+                script.
+                  window.onload = () => {
+                    const $elements = document.querySelectorAll('.on-site');
+                    const $toggle = document.getElementById('toggle');
+
+                    $toggle.onchange = (event) => {
+                      if (event.target.checked) {
+                        $elements.forEach($element => $element.classList.remove("hide"));
+                      } else {
+                        $elements.forEach($element => $element.classList.add("hide"));
+                      }
+                    }
+                  };
+
+        .row.mt-10
+            .col-12.col-md-7
+                h4 ¡Te invitamos a ser parte de este gran evento!
+                p Regístrate en:&nbsp;
+                    a(href="https://globalgamejam.org/2022/jam-sites/hermosillo") https://globalgamejam.org/2022/jam-sites/hermosillo
+
+        .row.my-5
+            .col
+                img.img-fluid(src="/images/pictures/ggj22/ggj-vr.jpg" alt="Un equipo de realidad virtual")
+
+    +virtual-hr
