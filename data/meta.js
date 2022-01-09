@@ -6,7 +6,7 @@ class MetaBuilder {
 
   constructor() {
     this.site = 'Culto al Perro Café';
-    this.description = 'Cafetería Indie Experimental. Una cafetería que entiende a la gente que trabaja. Hermosillo, Sonora.';
+    this.description = 'Sirviendo el café más perrón de Hermosillo, Sonora. La cafetería favorita de la gente que trabaja. Ven con tu laptop, libro favorito y/o mascota.';
     this.url = '';
     this.image = 'home.png';
   }
