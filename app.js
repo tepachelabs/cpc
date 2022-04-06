@@ -4,6 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var stylus = require('stylus');
+var expressSitemapXml = require('express-sitemap-xml')
+
+var sitemap = require('./data/sitemap');
 
 var captiveRouter = require('./routes/captive');
 var indexRouter = require('./routes/index');
@@ -23,6 +26,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(expressSitemapXml(() => sitemap, 'https://cultoperrocafe.com'))
 app.use(stylus.middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
