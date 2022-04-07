@@ -8,7 +8,7 @@ mixin products
               each product in starred
                   .col
                       .card
-                          img.card-img-top(src=product.src srcset=product.srcset alt=product.alt loading="lazy")
+                          img.card-img-top(src=product.src srcset=product.srcset alt=product.alt loading="lazy" width=240)
                           .card-body
                               .card-title
                                   span= product.title

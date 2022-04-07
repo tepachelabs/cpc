@@ -27,7 +27,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(expressSitemapXml(() => sitemap, 'https://cultoperrocafe.com'))
-app.use(stylus.middleware(path.join(__dirname, 'public')));
+app.use(stylus.middleware({
+  dest: path.join(__dirname, 'public'),
+  src: path.join(__dirname, 'public'),
+  compile: (str, path) => stylus(str).set('filename', path).set('compress', true),
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
