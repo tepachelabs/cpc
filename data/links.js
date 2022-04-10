@@ -3,6 +3,7 @@ const links = {
   'manual-eventos': 'https://cultoperrocafe.notion.site/Manual-para-organizadores-de-eventos-39bfaae8281241aab5bf0898588e4e2d',
   'concurso-disfraces-2021': 'https://cultoperrocafe.notion.site/Reglamento-concurso-de-disfraces-de-mascotas-30-de-Octubre-2021-d0cdf7483acf41f994eb2e8790575779',
   'contacto': 'https://forms.gle/fCmkQzX6TqUXXE9N6',
+  'facturacion': 'https://forms.gle/mrzxTU8sRjcugrQi8',
 };
 
 module.exports = links;
