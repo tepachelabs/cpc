@@ -1,20 +1,25 @@
-const db = require('knex')({
-  client: 'pg',
-  connection: process.env.PG_CONNECTION_STRING,
-  searchPath: ['public'],
-});
+const axios = require('axios').default;
+
+const query = `
+query GetProducts {
+  products {
+    id,
+    title,
+    thumbnail,
+    price,
+    available,
+    category {
+      id,
+      title
+    }
+  }
+}
+`;
+
+const URL = process.env.GRAPHQL_URL || 'http://localhost:3000/api/graphql';
 
 const menu = {
-  getProducts: () => {
-    return db.select(
-      'category_id',
-      'title',
-      'tags',
-      'price',
-    )
-      .table('products')
-      .where({ available: true });
-  }
+  getProducts: () => axios.post(URL, { query })
 };
 
 module.exports = menu;

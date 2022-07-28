@@ -14,7 +14,7 @@ block content
                 h4 Café
                 p Bebidas hechas con nuestro espresso: extracción rápida en caliente. ¡Haz fría tu bebida por 10 pesos más! Puedes pedirla frappé o en las rocas.
                 ul
-                    each product in products[1]
+                    each product in products[CATEGORY.COFFEE]
                         li
                             span #{product.title}
                             span #{formatPrice(product.price)}
@@ -23,7 +23,7 @@ block content
                 h4 Sin café
                 p Nuestras bebidas hechas con ingredientes naturales y sin café. ¡Haz fría tu bebida por 10 pesos más! Puedes pedirla frappé o en las rocas.
                 ul
-                    each product in products[2]
+                    each product in products[CATEGORY.NO_COFFEE]
                         li
                             span #{product.title}
                             span #{formatPrice(product.price)}
@@ -33,7 +33,7 @@ block content
                 h4 Desayunos
                 p Nuestro horario de desayunos es de 8AM a 4PM. Pregunta por disponibilidad.
                 ul
-                    each product in products[3]
+                    each product in products[CATEGORY.FOOD]
                         li
                             span #{product.title}
                             span #{formatPrice(product.price)}
@@ -43,7 +43,7 @@ block content
                 h4 Repostería
                 p Panqués hechos con amor en nuestra cocina, perfectos para acompañar tu bebida.
                 ul
-                    each product in products[4]
+                    each product in products[CATEGORY.DESSERTS]
                         li
                             span #{product.title}
                             span #{formatPrice(product.price)}
@@ -52,7 +52,7 @@ block content
                 h4 Métodos
                 p Para conocedores y paladares exigentes, contamos con diferentes métodos de extracción.
                 ul
-                    each product in products[5]
+                    each product in products[CATEGORY.METHODS]
                         li
                             span #{product.title}
                             span #{formatPrice(product.price)}

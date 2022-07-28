@@ -12,24 +12,32 @@ const metaBuilder = new MetaBuilder()
 
 const groupProductsByCategory = (products) => {
   return products.reduce((acc, curr) => {
-    if (!acc[curr.category_id]) {
-      acc[curr.category_id] = [];
+    if (!acc[curr.category.title]) {
+      acc[curr.category.title] = [];
     }
-    acc[curr.category_id].push(curr);
+    acc[curr.category.title].push(curr);
     return acc;
   }, {});
 };
 
 const formatPrice = (price) => (price / 100)
+const CATEGORY = {
+  COFFEE: 'Café',
+  NO_COFFEE: 'Sin café',
+  FOOD: 'Alimentos',
+  DESSERTS: 'Repostería',
+  METHODS: 'Especialidades',
+}
 
 /* GET home page. */
 router.get('/', async function (req, res) {
-  const products = await menu.getProducts();
+  const { data: { products } } = (await menu.getProducts()).data;
   res.render('menu', {
     ...metaBuilder.build(),
     path: req.originalUrl,
     products: groupProductsByCategory(products),
-    formatPrice
+    formatPrice,
+    CATEGORY
   });
 });
 
