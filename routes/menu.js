@@ -34,6 +34,7 @@ router.get('/', async function (req, res) {
   const { data: { products } } = (await menu.getProducts()).data;
   res.render('menu', {
     ...metaBuilder.build(),
+    version: req._VERSION,
     path: req.originalUrl,
     products: groupProductsByCategory(products),
     formatPrice,

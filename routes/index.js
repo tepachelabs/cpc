@@ -11,6 +11,7 @@ const metaBuilder = new MetaBuilder();
 router.get('/', function (req, res) {
   res.render('index', {
     ...metaBuilder.build(),
+    version: req._VERSION,
     path: req.originalUrl,
     starred,
     feed,

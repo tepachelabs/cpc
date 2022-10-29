@@ -11,7 +11,11 @@ const metaBuilder = new MetaBuilder()
 
 /* GET home page. */
 router.get('/', function (req, res) {
-  res.render('vip', { ...metaBuilder.build(), path: req.originalUrl });
+  res.render('vip', {
+    ...metaBuilder.build(),
+    version: req._VERSION,
+    path: req.originalUrl
+  });
 });
 
 module.exports = router;

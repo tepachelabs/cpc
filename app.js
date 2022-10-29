@@ -1,3 +1,4 @@
+var pkgJson = require('./package.json');
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -17,6 +18,12 @@ var testRouter = require('./routes/test');
 var redirectionRouter = require('./routes/redirection');
 
 var app = express();
+
+// sets the version of the app
+app.use((req, _, next) => {
+  req._VERSION = pkgJson.version;
+  next();
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

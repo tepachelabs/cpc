@@ -10,7 +10,11 @@ const metaBuilder = new MetaBuilder()
 
 /* GET home page. */
 router.get('/', function (req, res) {
-  res.render('ggj22', { ...metaBuilder.build(), path: req.originalUrl });
+  res.render('ggj22', {
+    ...metaBuilder.build(),
+    version: req._VERSION,
+    path: req.originalUrl
+  });
 });
 
 module.exports = router;

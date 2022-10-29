@@ -24,6 +24,7 @@ const metaBuilder = new MetaBuilder()
 router.get('/', function (req, res, next) {
   res.render('captive', {
     ...metaBuilder.build(),
+    version: req._VERSION,
     path: req.originalUrl,
     starred,
     feed
