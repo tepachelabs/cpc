@@ -4,7 +4,7 @@ const links = {
   'concurso-disfraces-2021': 'https://cultoperrocafe.notion.site/Reglamento-concurso-de-disfraces-de-mascotas-30-de-Octubre-2021-521e4bd1d22d44898df2123c7d2cd40a',
   'contacto': 'https://forms.gle/fCmkQzX6TqUXXE9N6',
   'facturacion': 'https://forms.gle/mrzxTU8sRjcugrQi8',
-  'tienda': 'https://tienda.cultoperrocafe.com',
+  'tienda': 'https://tienda.perro.cafe',
 };
 
 module.exports = links;
